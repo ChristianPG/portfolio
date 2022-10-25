@@ -1,5 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
+import { ArrowUpCircleIcon } from '@heroicons/react/24/solid';
 
 import About from '../components/About';
 import ContactMe from '../components/ContactMe';
@@ -41,6 +43,12 @@ const Home: NextPage = () => {
       <section id="contact" className="snap-start">
         <ContactMe />
       </section>
+
+      <footer className="flex justify-center items-center sticky bottom-5 w-full z-50">
+        <Link href="#hero">
+          <ArrowUpCircleIcon className="text-[#F7AB0A] h-12 w-12 filter grayscale hover:grayscale-0 cursor-pointer" />
+        </Link>
+      </footer>
     </div>
   );
 };
